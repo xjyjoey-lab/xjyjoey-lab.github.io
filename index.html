@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xing Jiayi | ML Engineer & Data Analyst</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">Xing Jiayi</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- 1. Home / Headline -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Seeking ML Engineer / Data Analyst Internship</h1>
+      <p class="subtitle">Transforming business insights through computer vision, NLP & scalable data systems</p>
+      <div class="tags">
+        <span>Python</span><span>SQL</span><span>PyTorch</span><span>FinBERT</span><span>MediaPipe</span><span>MySQL</span><span>Data Visualization</span>
+      </div>
+      <div class="cta">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="./assets/Xing_Jiayi_CV_EN.pdf" class="btn secondary" download>📥 Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About Me -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="intro">
+        Master's candidate in Artificial Intelligence & Business Analytics at Lingnan University (Hong Kong), with a solid undergraduate foundation in Information and Computing Science. I bridge advanced AI models with real-world business applications—specializing in end-to-end ML pipelines, relational database architecture, and data-driven storytelling. Through internships in fintech and edtech, I've honed the ability to translate technical results into actionable business value.
+      </p>
+      <div class="about-grid">
+        <div class="about-item">
+          <strong>Education</strong>
+          <p>Lingnan University (HK) | AI & Business Analytics (MSc) | Expected 2026<br/>
+          Hebei Finance University | Information & Computing Science (BSc) | 2019–2023</p>
+        </div>
+        <div class="about-item">
+          <strong>Focus Areas</strong>
+          <ul>
+            <li>End-to-end AI/ML development (CV, NLP, Transformer fine-tuning)</li>
+            <li>Relational database design, 3NF normalization & business SQL analytics</li>
+            <li>Data storytelling, statistical modeling & KPI optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Skills -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <h2>Skills</h2>
+      <p class="section-note">All competencies below are directly demonstrated in the Projects portfolio.</p>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>🔧 Technical</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>SQL</span><span>PyTorch</span><span>Hugging Face</span><span>MediaPipe</span><span>OpenCV</span><span>Scikit-learn</span><span>Statistical Testing</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>📊 Business/Analytical</h3>
+          <div class="skill-tags">
+            <span>Problem Framing</span><span>Metric Tracking (F1/Accuracy)</span><span>3NF Normalization</span><span>Business Query Design</span><span>Data Storytelling</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>🛠 Tools</h3>
+          <div class="skill-tags">
+            <span>Git/GitHub</span><span>Pandas/NumPy</span><span>Matplotlib/Seaborn</span><span>MySQL</span><span>Tkinter</span><span>AdamW Optimizer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Projects (Core) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Posture Guard AI</h3>
+          <span class="project-time">Apr 2026</span>
+        </div>
+        <ul class="project-list">
+          <li><strong>Problem:</strong> Address "Tech Neck" from prolonged screen time with a low-cost, real-time posture monitoring tool using standard RGB cameras.</li>
+          <li><strong>Data:</strong> Self-curated multi-scenario video corpus (3 users, varied lighting/occlusions) for robustness validation.</li>
+          <li><strong>Approach:</strong> MediaPipe Face Mesh (468 landmarks) + OpenCV solvePnP for Euler angle estimation; multi-threaded architecture with thread-safe DoubleBuffer for 25–30 FPS; dynamic calibration to normalize camera-angle bias.</li>
+          <li><strong>Outcome:</strong> ~89.2% Pitch accuracy & ~94.6% Roll accuracy (F1≈0.846); stable Tkinter GUI running on consumer hardware under non-ideal conditions.</li>
+          <li><strong>Contribution:</strong> Led full-stack development: designed multi-threading pipeline, implemented PnP pose math & differential calibration logic, built real-time GUI, conducted robustness evaluation.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>FinBERT Financial Sentiment Analysis</h3>
+          <span class="project-time">Mar 2026</span>
+        </div>
+        <ul class="project-list">
+          <li><strong>Problem:</strong> Financial text classification suffers from domain nuance and class imbalance; need to systematically compare loss functions and hyperparameters for optimal generalization.</li>
+          <li><strong>Data:</strong> Merged 3 Kaggle datasets (Twitter Financial News, NIFTY Headlines, FinancialPhraseBank); stratified 80/20 split with source-tagged preprocessing.</li>
+          <li><strong>Approach:</strong> Fine-tuned ProsusAI/FinBERT via Hugging Face; executed full-factor grid search (32 configs: 2 loss × 4 LR × 4 BS); implemented Weighted CE & Enhanced Focal Loss with AdamW, warmup, gradient clipping, F1-based early stopping.</li>
+          <li><strong>Outcome:</strong> Best config: Macro F1 89.92% / Acc 88.79%; paired t-test (p=0.789) proved Weighted CE ≈ Focal Loss for moderate imbalance; identified annotation ambiguity as primary error source.</li>
+          <li><strong>Contribution:</strong> Co-developed hyperparameter grid search pipeline in PyTorch; implemented evaluation metrics (Macro F1, balanced accuracy) and paired t-test for statistical significance; authored convergence visualization and error analysis sections.</li>
+          <li><strong>Link:</strong> <a href="https://github.com/zhoubojian-stevenchow/CDS525_Group_Project" target="_blank">GitHub Repo</a></li>
+        </ul>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>ZARA Application Database Modeling</h3>
+          <span class="project-time">Nov 2025</span>
+        </div>
+        <ul class="project-list">
+          <li><strong>Problem:</strong> Fast-fashion retail requires a scalable, non-redundant database to manage users, SKU variants, multi-location inventory, and transactions while enabling data-driven analytics.</li>
+          <li><strong>Data:</strong> Conceptual ER model → 13 relational tables; simulated business data covering profiles, carts, orders, payments, stock logs across locations.</li>
+          <li><strong>Approach:</strong> End-to-end DB engineering: ER Diagram → Relational Schema → 3NF Normalization; enforced PK/FK constraints; developed 5 complex SQL JOIN queries for sales, inventory alerts, customer behavior.</li>
+          <li><strong>Outcome:</strong> Delivered fully normalized, production-ready schema; SQL analytics directly support inventory optimization, sales ranking, customer segmentation; clear roadmap for data warehouse integration.</li>
+          <li><strong>Contribution:</strong> Solely responsible for Parts V–VII: designed analytics architecture (sales/inventory/customer behavior), executed 3NF-based relational implementation, developed all business SQL queries, and ensured overall schema consistency.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Resume -->
+  <section id="resume" class="section alt-bg">
+    <div class="container center">
+      <h2>Resume</h2>
+      <p class="resume-desc">Download my full CV for detailed experience, education, and technical competencies.</p>
+      <a href="./assets/Xing_Jiayi_CV_EN.pdf" class="btn primary large" download>📥 Download Full Resume (PDF)</a>
+      <p class="small-note">✅ Hosted on GitHub Pages — no external permissions required</p>
+    </div>
+  </section>
+
+  <!-- 6. Contact -->
+  <section id="contact" class="section">
+    <div class="container center">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <p>✉️ <a href="mailto:xjy.joey@gmail.com">xjy.joey@gmail.com</a></p>
+        <p>📱 +86 188 0301 8068</p>
+        <p>🔗 <a href="https://github.com/xjyjoey-lab" target="_blank">github.com/xjyjoey-lab</a></p>
+      </div>
+      <p class="contact-note">Open to ML Engineer, Data Analyst & Business Intelligence roles. Let's connect!</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Xing Jiayi | Built with GitHub Pages | Minimal Tech Theme</p>
+  </footer>
+
+  <script>
+    // 移动端导航切换
+    document.querySelector('.mobile-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav-links').classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
